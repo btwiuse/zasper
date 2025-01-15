@@ -1,5 +1,9 @@
 {
   "image": "btwiuse/arch:golang",
-  "features": {
-  }
+
+	"postCreateCommand": "sudo pacman -Syu --noconfirm nodejs npm yarn",
+
+	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+
+	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ]
 }
