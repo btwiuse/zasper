@@ -1,7 +1,9 @@
 {
   "image": "btwiuse/arch:golang",
 
-	"postCreateCommand": "sudo pacman -Syu --noconfirm nodejs npm yarn zeromq && npm --prefix ./ui ci && npm --prefix ./ui run build && go build -tags webapp && ./zasper -debug",
+	"postCreateCommand": "sudo pacman -Syu --noconfirm nodejs npm yarn zeromq && npm --prefix ./ui i && npm --prefix ./ui run build && go build -tags webapp",
+
+	"postStartCommand": "./zasper -debug",
 
 	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
 
