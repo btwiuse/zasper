@@ -1,5 +1,3 @@
-const port = 8048
-
-export const BaseApiUrl = `http://localhost:${port}`
-export const BaseWebSocketUrl = `ws://localhost:${port}`
-export const WsBaseUrl = `ws://localhost:${port}/api/kernels/`
+export const BaseApiUrl = ``
+export const BaseWebSocketUrl = ``
+export const WsBaseUrl = `/api/kernels/`
